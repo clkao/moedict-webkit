@@ -30,6 +30,7 @@ sudo npm install -g LiveScript jade
 npm install webworker-threads
 gem install sass
 gem install compass
+npm install
 ```
 
 ## 建置
