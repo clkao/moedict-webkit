@@ -578,8 +578,8 @@ window.do-load = ->
     $('#result a[href]:not(.xref)').tooltip {
       +disabled, tooltipClass: "prefer-pinyin-#{ true /* !!getPref \prefer-pinyin */ }", show: 100ms, hide: 100ms, items: \a,
       open: ->
-        #$('.ui-tooltip-content h1').ruby!
-        #_pua!
+        Han document.querySelector('.ui-tooltip-content') .renderRuby!
+        _pua!
       content: (cb) ->
         id = $(@).attr \href .replace /^#['!:~]?/, ''
         callLater ->

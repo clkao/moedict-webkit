@@ -1010,7 +1010,10 @@
         show: 100,
         hide: 100,
         items: 'a',
-        open: function(){},
+        open: function(){
+          Han(document.querySelector('.ui-tooltip-content')).renderRuby();
+          return _pua();
+        },
         content: function(cb){
           var id;
           id = $(this).attr('href').replace(/^#['!:~]?/, '');
