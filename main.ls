@@ -520,7 +520,7 @@ window.do-load = ->
       <- setTimeout _, 125ms
       $('.ui-tooltip').remove!
 
-    $ \#result .ruby!
+    Han document.getElementById('result') .renderRuby!
     _pua!
     $ '#result h1' .css \visibility \visible
     window.scroll-to 0 0
@@ -578,8 +578,8 @@ window.do-load = ->
     $('#result a[href]:not(.xref)').tooltip {
       +disabled, tooltipClass: "prefer-pinyin-#{ true /* !!getPref \prefer-pinyin */ }", show: 100ms, hide: 100ms, items: \a,
       open: ->
-        $('.ui-tooltip-content h1').ruby!
-        _pua!
+        #$('.ui-tooltip-content h1').ruby!
+        #_pua!
       content: (cb) ->
         id = $(@).attr \href .replace /^#['!:~]?/, ''
         callLater ->

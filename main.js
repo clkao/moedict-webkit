@@ -933,7 +933,7 @@
           return $('.ui-tooltip').remove();
         }, 125);
       }, 125);
-      $('#result').ruby();
+      Han(document.getElementById('result')).renderRuby();
       _pua();
       $('#result h1').css('visibility', 'visible');
       window.scrollTo(0, 0);
@@ -1010,10 +1010,7 @@
         show: 100,
         hide: 100,
         items: 'a',
-        open: function(){
-          $('.ui-tooltip-content h1').ruby();
-          return _pua();
-        },
+        open: function(){},
         content: function(cb){
           var id;
           id = $(this).attr('href').replace(/^#['!:~]?/, '');
